@@ -1,0 +1,22 @@
+{
+  "name": "codesaga",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "setup:gmail": "node scripts/setup-gmail.mjs",
+    "email:check": "node server/src/check-email.js",
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --workspace=client",
+    "start": "npm run start --workspace=server",
+    "test": "npm run test --workspace=server"
+  }
+}
